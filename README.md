@@ -14,7 +14,7 @@ It can be setup by following the steps here:
 https://docs.sui.io/devnet/build/install
 
 # Test
-In a terminal, run `sui move test` (TBD!)
+In a terminal, run `sui move test` (NOTE - test will fail, as I don't know how to mimic a coin transfer)
 
 # Devnet address
 TBD
