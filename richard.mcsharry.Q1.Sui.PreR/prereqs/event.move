@@ -69,13 +69,13 @@ module event::tickets {
       event::emit(TicketCreated {
         id: object::uid_to_inner(&id),
         title: string::utf8(title),
-        holder: string::utf8(author),
+        holder: string::utf8(holder),
       });
 
       let ticket = Ticket{
         id: id,
         title: string::utf8(title),
-        owner: string::utf8(author),
+        holder: string::utf8(holder),
         description: option::none(),
       };
 
@@ -107,7 +107,7 @@ module event::tickets {
     let ticket = object_table::borrow(&event.tickets, id);
     (
       ticket.title,
-      ticket.owner,
+      ticket.holder,
       ticket.description,
     )
   }
